@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Tasks</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script defer src="../JS/main.js"></script>
+</head>
+
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Tasks</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="subjects.html">Manage Subjects</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <section>
+                <h2>Add Task</h2>
+
+<form action="http://localhost:3000/add-assignment" method="POST" onsubmit="return validateTask()" novalidate>
+                    <label>Subject:</label>
+                    <select name="subject" id="subject" required>
+                        <option value="" disabled selected>Select subject</option>
+                    </select>
+
+                    <label>Title:</label>
+                    <input type="text" id="title" name="title" required maxlength="50">
+
+                    <label>Type:</label>
+                    <select name="type">
+                        <option>Assignment</option>
+                        <option>Quiz</option>
+                        <option>Exam</option>
+                    </select>
+
+                    <label>Due Date:</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+
+                    <label>Status:</label>
+                    <select id="status" name="status" required>
+                        <option value="">Select Status</option>
+                        <option value="Not Started">Not Started</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+
+                    <label>Notes:</label>
+                    <textarea id="notes" name="notes" maxlength="200"></textarea>
+                    <button type="submit">Save Task</button>
+                </form>
+
+                <h2>Task Table</h2>
+                <div id="assignmentsContainer"></div>
+            </section>
+
+            <aside>
+                <h3>Tips</h3>
+                <p>Remember to update your Task regularly and track due dates</p>
+                <img src="../Media/tasknote.jpg" alt="Tips Image"
+                     style="width:100%; border-radius:10px; margin-bottom:15px;">
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 StudyHub project, University of Jeddah</p>
+        </footer>
+    </div>
+</body>
+</html>

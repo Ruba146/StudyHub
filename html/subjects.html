@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Manage subjects</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Manage Subjects</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="subjects.html">Manage Subjects</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <section>
+                <h2>Add New Subject</h2>
+
+                <form action="http://localhost:3000/add-subject" method="POST" id="subjectForm">
+                    
+                    <div class="form-group">
+                        <label for="subjectName">Subject Name:</label>
+                        <input type="text" id="subjectName" name="subjectName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjectCode">Course Code (e.g., CS101):</label>
+                        <input type="text" id="subjectCode" name="subjectCode" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="credits">Credit Hours:</label>
+                        <select id="credits" name="credits">
+                            <option value="1">1 Hour</option>
+                            <option value="2">2 Hours</option>
+                            <option value="3">3 Hours</option>
+                            <option value="4">4 Hours</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit">Add Subject</button>
+                </form>
+
+                <h2 style="margin-top:40px;">Subjects List</h2>
+
+                <div id="subjectsContainer"></div>
+
+            </section>
+
+            <aside>
+                <h3>Tips</h3>
+                <p>Make sure to verify the course code before adding</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 StudyHub Project, University of Jeddah</p>
+        </footer>
+    </div>
+
+    <script src="../JS/main.js?v=10"></script>
+</body>
+</html>

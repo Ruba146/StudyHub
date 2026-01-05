@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - Contact us</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="subjects.html">Manage Subjects</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <section>
+                <h2>Get in Touch</h2>
+                <p>Fill out the form below to contact the developers</p>
+                <form action="http://localhost:3000/submit-contact" method="POST" id="contactForm">
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male" checked> 
+                        <label for="male" style="display:inline">Male</label>
+                        <input type="radio" id="female" name="gender" value="female"> 
+                        <label for="female" style="display:inline">Female</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile (10 digits):</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="05xxxxxxxx" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="language">Preferred language:</label>
+                        <select id="language" name="language">
+                            <option value="English">English</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="French">French</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Send message</button>
+                </form>
+            </section>
+
+            <aside>
+                <h3>Contact info</h3>
+                <p>Email: support@studyhub.uj.edu.sa</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 StudyHub project, University of Jeddah</p>
+        </footer>
+    </div>
+    <script src="../JS/main.js"></script>
+</body>
+</html>
