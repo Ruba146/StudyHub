@@ -33,11 +33,11 @@ StudyHub is a full-stack web application designed to help students manage their 
 
 StudyHub/
 
-- html/        # Frontend pages
-- css/         # Stylesheets
-- js/          # Client-side scripts
-- media/       # Images and assets
-- backend/     # Node.js backend server
+- html         # Frontend pages
+- css          # Stylesheets
+- js           # Client-side scripts
+- media        # Images and assets
+- backend      # Node.js backend server
 - database.sql # Database schema
 
 ---
